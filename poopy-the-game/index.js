@@ -5,7 +5,7 @@ const godotConfig = {
   "fileSizes":{"index.pck":87968256,"index.wasm":39513091},
   canvas: document.getElementById("canvas"),
 };
-let engine = new Engine(godotConfig);
+const engine = new Engine(godotConfig);
 const canvas = godotConfig.canvas;
 
 function updateCanvasResolution() {
@@ -17,6 +17,17 @@ function updateCanvasResolution() {
         engine.setWindowSize(bounds.width * pixelRatio, bounds.height * pixelRatio);
     }
 }
+
+// prevent Godot's loader from overwriting the title and favicon
+const title = "Poopy The Game"
+document.title = title;
+Object.defineProperty(document, 'title', {
+    get: function() { return title; },
+    set: function(val) { 
+      // No-op
+    },
+    configurable: true
+});
 
 engine.startGame()
   .then(() => {

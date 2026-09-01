@@ -1,6 +1,6 @@
 :root {
     font-family: "Patrick Hand", sans-serif;
-    font-size: 18px;
+    font-size: 22px;
 }
 
 body {
@@ -38,6 +38,20 @@ canvas {
 h1 {
     font-size: 40px;
     text-align: center;
+}
+
+img.icon {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
 }
 
 h2 {
