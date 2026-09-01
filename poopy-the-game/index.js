@@ -1,6 +1,6 @@
 const godotConfig = {
   args: [],
-  canvasResizePolicy: 1, 
+  canvasResizePolicy: 0, 
   executable: "assets/index",
   "fileSizes":{"index.pck":87968256,"index.wasm":39513091},
   canvas: document.getElementById("canvas"),
