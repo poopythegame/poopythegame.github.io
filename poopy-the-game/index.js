@@ -7,6 +7,7 @@ const godotConfig = {
 };
 const engine = new Engine(godotConfig);
 const canvas = godotConfig.canvas;
+let canStart = true;
 
 function updateCanvasResolution() {
     const pixelRatio = window.devicePixelRatio || 1; 
@@ -29,7 +30,20 @@ Object.defineProperty(document, 'title', {
     configurable: true
 });
 
-engine.startGame()
-  .then(() => {
-    updateCanvasResolution();
-  });
+window.onload = () => {
+  let canvas = document.querySelector('#canvas');
+  let game = document.querySelector('#game');
+  let status = document.querySelector('#game_status')
+  canvas.classList.add("hidden");
+  game.onclick = () => {
+    if (canStart) {
+      canStart = false;
+      status.innerText = "Loading...";
+      engine.startGame()
+        .then(() => {
+          canvas.classList.remove("hidden");
+          status.classList.add("hidden");
+        });
+    }
+  };
+}
