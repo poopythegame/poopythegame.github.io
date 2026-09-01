@@ -1,0 +1,45 @@
+:root {
+    font-family: "Patrick Hand", sans-serif;
+    font-size: 18px;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #ffed96;
+}
+
+#content {
+    margin: 0 auto;
+}
+
+#downloads {
+    background-color: #7079e1;
+    padding: 1em;
+    margin: 1em 0;
+    border-color: black;
+    border-width: 3px;
+    border-radius: 10px;
+    border-style: solid;
+}
+
+canvas {
+    width: 853px;
+    height: 485.333px;
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+}
