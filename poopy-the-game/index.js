@@ -30,20 +30,17 @@ Object.defineProperty(document, 'title', {
     configurable: true
 });
 
-window.onload = () => {
-  let canvas = document.querySelector('#canvas');
-  let game = document.querySelector('#game');
-  let status = document.querySelector('#game_status')
-  canvas.classList.add("hidden");
-  game.onclick = () => {
-    if (canStart) {
-      canStart = false;
-      status.innerText = "Loading...";
-      engine.startGame()
-        .then(() => {
-          canvas.classList.remove("hidden");
-          status.classList.add("hidden");
-        });
-    }
-  };
-}
+let game = document.querySelector('#game');
+let status = document.querySelector('#game_status')
+canvas.classList.add("hidden");
+game.onclick = () => {
+  if (canStart) {
+    canStart = false;
+    status.innerText = "Loading...";
+    engine.startGame()
+      .then(() => {
+        canvas.classList.remove("hidden");
+        status.classList.add("hidden");
+      });
+  }
+};
