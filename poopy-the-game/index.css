@@ -13,6 +13,7 @@ body {
 
 #content {
     margin: 0 auto;
+    max-width: 50vw;
 }
 
 #game {
@@ -26,6 +27,7 @@ body {
     overflow: hidden;
     width: 853px;
     height: 485.333px;
+    margin: 0 auto;
 }
 
 .links {
