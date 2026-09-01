@@ -54,12 +54,13 @@ h1 {
     text-align: center;
 }
 
-img.icon {
-    max-width: 50px;
-    max-height: 50px;
+img.logo {
+    min-width: 0;
+    max-height: 100px;
 }
 
 header {
+    padding-top: 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
